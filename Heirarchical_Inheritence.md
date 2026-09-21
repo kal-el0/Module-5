@@ -1,7 +1,10 @@
 # Hierarchical Inheritance in Python
 
 This Python project demonstrates **Hierarchical Inheritance** using a base class `Details` and two derived classes `Employee` and `Patient`. The program collects and displays details for both employees and patients.
+## Student Details
 
+- **Name:** Yuvan Raj M
+- **Register Number:** 212223080062
 ## 🎯 Aim
 
 To write a Python program that uses **Hierarchical Inheritance** to input and display **Employee** and **Patient** details.
@@ -31,6 +34,60 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-Add code here
+```
+class Details:
+    def getName(self):
+        self.name = input("Enter name: ")
+    
+    def getAge(self):
+        self.age = int(input("Enter age: "))
+
+
+# Derived class 1
+class Employee(Details):
+    def getEmployeeDetails(self):
+        self.getName()
+        self.getAge()
+        self.employee_id = input("Enter employee ID: ")
+        self.department = input("Enter department: ")
+
+    def showEmployee(self):
+        print("\n--- Employee Details ---")
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Employee ID:", self.employee_id)
+        print("Department:", self.department)
+
+
+# Derived class 2
+class Patient(Details):
+    def getPatientDetails(self):
+        self.getName()
+        self.getAge()
+        self.patient_id = input("Enter patient ID: ")
+        self.disease = input("Enter disease: ")
+
+    def showPatient(self):
+        print("\n--- Patient Details ---")
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Patient ID:", self.patient_id)
+        print("Disease:", self.disease)
+
+
+# Create objects
+emp = Employee()
+pat = Patient()
+
+# Get details
+emp.getEmployeeDetails()
+pat.getPatientDetails()
+
+# Display details
+emp.showEmployee()
+pat.showPatient()
+```
 ## Sample Output
+<img width="629" height="837" alt="image" src="https://github.com/user-attachments/assets/9d5eda9e-e402-451b-9b64-44f0904509e7" />
+
 
